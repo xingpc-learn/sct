@@ -1,0 +1,28 @@
+server:
+  port: 9004
+
+spring:
+  application:
+    name: sct-order-service
+
+eureka:
+  client:
+    #    表示是否将自己注册进注册中心
+    register-with-eureka: true
+    #    是否从注册中心拉取已有的注册信息，单点无所谓，集群必须为true，配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      #        设置与Eureka交互的服务地址
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+
+# 设置OpenFeign超时时间
+ribbon:
+  # 读取资源时间
+  ReadTimeout: 5000
+  # 建立连接所用时间
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    # Feign日志级别，监控接口
+    com.xingpc.sct.service.PaymentFeignService: debug

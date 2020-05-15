@@ -1,0 +1,9 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: sct-order-service
+  cloud:
+    zookeeper:
+      connect-string: 192.168.88.135:2181,192.168.88.136:2182,192.168.88.133:2183

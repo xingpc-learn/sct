@@ -1,0 +1,20 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: sct-config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+          search-paths:
+            - config
+      # 读取分支
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
