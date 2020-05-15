@@ -8,9 +8,11 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/xingpc-learn/sct.git
           search-paths:
-            - config
+            - /sct/config
+          username: xingpc-learn
+          password: xing.1016
       # 读取分支
       label: master
 
