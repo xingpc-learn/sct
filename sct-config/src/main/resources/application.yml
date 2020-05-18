@@ -10,7 +10,7 @@ spring:
         git:
           uri: https://github.com/xingpc-learn/sct.git
           search-paths:
-            - /sct/config
+            - config
           username: xingpc-learn
           password: xing.1016
       # 读取分支
