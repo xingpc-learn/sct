@@ -25,6 +25,7 @@
         <module>../sct-hystrix-dashboard</module>
         <module>../sct-gateway</module>
         <module>../sct-config</module>
+        <module>../sct-config-client</module>
     </modules>
 
     <packaging>pom</packaging>
