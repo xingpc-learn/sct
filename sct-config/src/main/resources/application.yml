@@ -33,4 +33,4 @@ management:
   endpoints:
     web:
       exposure:
-        exclude: 'bus-refresh'
+        include: 'bus-refresh'
