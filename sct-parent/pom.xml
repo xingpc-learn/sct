@@ -26,6 +26,7 @@
         <module>../sct-gateway</module>
         <module>../sct-config</module>
         <module>../sct-config-client</module>
+        <module>../sct-config-client02</module>
     </modules>
 
     <packaging>pom</packaging>

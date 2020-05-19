@@ -1,5 +1,5 @@
 server:
-  port: 3355
+  port: 3366
 
 spring:
   application:
@@ -10,13 +10,12 @@ spring:
       name: sct-config
       profile: dev
       uri: http://localhost:3344
-    # RabbitMQ相关配置
+  # RabbitMQ相关配置
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
-
 eureka:
   client:
     service-url:
