@@ -1,0 +1,34 @@
+server:
+  port: 9902
+
+spring:
+  application:
+    name: sct-stream-provider
+  cloud:
+    stream:
+      binders: # 此处配置绑定的rabbitmq的服务信息
+        defaultRabbit: # 定义的名称，用于bindings整合
+          type: rabbit # 消息组件类型
+          environment: # rabbitmq相关的配置信息
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      bindings: # 服务整合处理
+        input: # 通道名称
+          destination: sctExchange # 使用交换机名称
+          content-type: application/json # 消息类型
+          binder: defaultRabbit # 要绑定的消息服务具体设置
+          group: streamConsumer # 自定义分组避免消息重复消费
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 5
+    instance-id: stream-9902.com
+    prefer-ip-address: true

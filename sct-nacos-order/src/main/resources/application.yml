@@ -1,0 +1,14 @@
+server:
+  port: 2001
+
+spring:
+  application:
+    name: sct-nacos-order-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+# 消费者将要访问的微服务名称
+service-url:
+  nacos-user-service: http://sct-nacos-payment-service
