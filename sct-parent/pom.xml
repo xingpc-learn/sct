@@ -27,6 +27,13 @@
         <module>../sct-config</module>
         <module>../sct-config-client</module>
         <module>../sct-config-client02</module>
+        <module>../sct-cloud-stream-rabbit-provider</module>
+        <module>../sct-cloud-stream-rabbit-consumer02</module>
+        <module>../sct-cloud-stream-rabbit-consumer01</module>
+        <module>../sct-nacos-payment</module>
+        <module>../sct-nacos-payment02</module>
+        <module>../sct-nacos-order</module>
+        <module>../sct-nacos-config</module>
     </modules>
 
     <packaging>pom</packaging>

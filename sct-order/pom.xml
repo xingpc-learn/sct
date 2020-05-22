@@ -13,6 +13,11 @@
     <artifactId>sct-order</artifactId>
 
     <dependencies>
+        <!-- zipkin链路跟踪监控  -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
